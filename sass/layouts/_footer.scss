@@ -1,0 +1,38 @@
+footer {
+    background-color: rgb(61, 60, 60);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    
+    a {
+        color: white;
+        margin: 6px;
+    }
+
+    a
+
+    img {
+        height:15px;
+        color: white;
+    }
+
+    i[class="fa-solid fa-utensils"] {
+        padding-right: 14px;
+    }
+
+    i[class="fa-solid fa-handshake-angle"]{
+        padding-right: 8px;
+    }
+
+
+    .link__logo{
+        margin-bottom: 30px;
+    }
+
+    .link__shirk{
+        
+       
+        font-family: 'Shrikhand';
+      
+    }
+}

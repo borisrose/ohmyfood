@@ -1,0 +1,50 @@
+.exploration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 245, 245, 0.63);
+    padding-bottom: 60px;
+    padding-left: 90px;
+    padding-right: 90px;
+
+
+    h1{
+        padding-top: 30px;
+
+    }
+
+    p{
+        
+        color: rgba(83, 83, 83, 0.63);
+        margin-bottom: 40px;
+    }
+   
+
+    button {
+
+        
+        padding: 18px 18px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 500;
+        border: none;
+       
+        background-image: linear-gradient(
+            to left,
+            $primary-color,
+            $secondary-color,
+
+        );
+
+        box-shadow: 2px 2px 2px rgb(209, 209, 209);
+
+        a {
+            color: white;
+        }
+
+        &:hover {
+            box-shadow: 6px 6px 6px rgb(196, 194, 194);
+        }
+    }
+}
