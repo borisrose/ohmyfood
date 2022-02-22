@@ -1,4 +1,5 @@
 @import "./utils/variables";
+
 @import "./layouts/restaurants";
 @import "./layouts/header";
 @import "./layouts/main";
@@ -6,6 +7,15 @@
 @import "./layouts/exploration";
 @import "./layouts/functioning";
 @import "./layouts/footer";
+
+@import "./pages/header-menu";
+@import "./pages/restaurant-picture";
+@import "./pages/restaurant-menu";
+@import "./pages/restaurant-menu-headers";
+@import "./pages/restaurant-box-item";
+@import "./pages/item-validate-btn";
+@import "./pages/restaurant-menu-order";
+
 @import "./base/document";
 
 @import "./vendors/sass_fontawesome/fontawesome.scss";

@@ -1,0 +1,72 @@
+.restaurant-box-item{
+
+    background-color: rgb(253, 251, 251);
+   
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+    box-shadow: 2px 2px 2px rgb(185, 181, 181);
+    position: relative;
+
+
+    .item-info{
+
+        h3{
+            margin: 0;
+            font-size: 18px;
+        }
+    
+        span {
+            display: inline-block;
+            margin-top: 7px;
+        }
+
+       
+    }
+
+    .item-price{
+       
+        position: relative;
+        z-index: 0;
+        margin-right: 20px ;
+        align-self: flex-end;
+        transition-duration: 1s;
+        transition-timing-function: ease;
+        transition-property: transform ;
+        
+
+        span{
+            font-weight: 600;
+        }
+    }
+    
+    .item-validate-btn{
+        position:relative;
+       
+        z-index: 1;
+        
+        bottom: 0;
+        border:solid black 2px;
+        height: 100%;
+
+        background-color: $tertiary-color;
+
+    
+        i{
+            color:$tertiary-color;
+            border-radius: 25px;
+            background-color: white;
+            padding: 3px;
+        }
+    }
+
+    &:hover .item-price{
+        transform: translateX(-40px) ;
+    }
+
+
+}

@@ -1,0 +1,12 @@
+.restaurant-picture {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border: solid black 2px;
+    justify-content: center;
+    img {
+        object-fit: cover;
+        
+    }
+}

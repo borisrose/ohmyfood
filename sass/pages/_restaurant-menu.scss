@@ -1,0 +1,24 @@
+.restaurant-menu{
+    background-color: rgba(238, 236, 236, 0.63);;
+    padding: 30px 30px;
+
+    h1{
+        font-family: 'Shrikhand';
+        font-size: 26px;
+        /*word-spacing: 0cm;*/
+    }
+
+    &-starters, &-dishes, &-desserts{
+
+        :nth-child(3){
+            margin: 20px 0px;
+        }
+
+        :nth-child(4){
+            margin-bottom: 30px;
+        }
+    }
+
+  
+
+}
