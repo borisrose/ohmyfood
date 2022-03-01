@@ -21,9 +21,9 @@
     }
    
 
-    button {
+    a {
 
-        
+        color: white;
         padding: 18px 18px;
         border-radius: 25px;
         font-size: 16px;
@@ -38,10 +38,6 @@
         );
 
         box-shadow: 2px 2px 2px rgb(209, 209, 209);
-
-        a {
-            color: white;
-        }
 
         &:hover {
             box-shadow: 6px 6px 6px rgb(196, 194, 194);
