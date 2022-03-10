@@ -1,5 +1,13 @@
-.header_menu{
+.header-menu{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+
+    i {
+        align-self: flex-start;
+        position: absolute;
+        left: 30px;
+        font-size: 24px;
+    }
    
 }

@@ -16,11 +16,11 @@ footer {
         color: white;
     }
 
-    i[class="fa-solid fa-utensils"] {
+    i[class="fas fa-utensils"] {
         padding-right: 14px;
     }
 
-    i[class="fa-solid fa-handshake-angle"]{
+    i[class*="helping"]{
         padding-right: 8px;
     }
 

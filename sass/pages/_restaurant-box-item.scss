@@ -1,84 +1,116 @@
 .restaurant-box-item{
 
-    background-color: white;
+
     border: solid black 2px;
     border-radius: 25px;
+    background-color: #99E2D0;
+
+    // proprité nécessaire car la hauteur des box doit être limitée
+    height: 80px;
+    width: 100%;
+
+
+
+
+    // proprités nécessaires pour la direction dans laquelle se rangent des différentes box intérieures 
     display: flex;
     flex-direction: row;
-    position: relative;
-    overflow: hidden;
-    opacity: 1;
-    height: 90px;
-  
-
-  
+   
     
+
+   
+  
+    // propriété nécessaire compte tenu de l'animation @keyframes display-dishes qui joue sur valeur de l'opacité
+    opacity: 1;
+
+    //propriété nécessaire car la box-info aurait dépassé le cadre de la box actuelle 
+    overflow: hidden;
+  
+    //mécanique d'affiche des différentes options une par une 
     &.rb__delay{
         animation-name: display-dishes;
         animation-duration: 2s;
         animation-fill-mode: backwards;
-        @for $i from 1 through 3 {
+        @for $i from 1 through 4 {
             &--#{$i} {
-                animation-delay: $i * 1s;
+                animation-delay: $i *  $tr-dur;
             }
         }
 
+       
+
     }
+
+
+
+    // fin de la mécanique d'affichage des options 
         
     &:hover {
 
+        // animation css du bouton de validation qui existe mais en none display dans la box 
         & > .item-validate-btn {
-        transform: translateX(-20px);
+            display: flex;
+            
+            animation: animation-btn 500ms ease;
 
             i{
-                animation: validate-btn 2s;
+                animation: validate-btn 500ms 150ms;
             }
         }
 
-        & > .item-price {
-            transform: translateX(-35px);
-        }
-
-        & > .item-info {
-           
-           width: 300px;
-           
+    
+       
+        & > .item-info {  
+    
+           p{   
+                text-overflow: ellipsis;
+            }    
 
         }
         
     }
 
 
-    
+    // ---------------------------------------partie liée à box information 
     .item-info{
-        text-overflow:ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-       
+    
+        border: solid black 2px;
         background-color: burlywood;
-        position: relative;
-        z-index: 1;
-        width: 80%;
-        height: 90px;
-        transform-origin: left;
-        transition-duration: 2s;
-        transition-property: transform;
-       
-     
+        width:80%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+        
+        overflow: hidden;
+        
 
         h3{
-            margin-top: 10px;
-            margin-bottom: 9px;
+        
+            font-size: 18px;
+            padding-top: 0;
+            margin-bottom: 0;
+            margin-top: 0;
+
         }
        
-        h3, span{
+        h3, p{
             padding-left: 20px;
-            padding-right: 20px;;
+            padding-right: 20px;
         }
 
-        span {
-            display: inline-block;
-            padding-top: 4px;
+        p {
+           
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+        
+            font-size: 14px;
+            margin-top: 10px;
             padding-bottom: 0;
             margin-bottom: 0;
             
@@ -88,58 +120,66 @@
         
     }
 
-    .item-price{
+    //------------------------------------------------------ PARTIE LIEE A LA BOX DU PRIX --------------------
+    .item-price {
 
-        transition-duration: 2s;
-        transition-property: transform;
-        transition-timing-function: ease;
-        
         width: 20%;
-   
-        height: 90px;
+        height: 100%;
         background-color: cadetblue;
         text-align: center;
+        
+        
+
+        
+
+
+      
+        
+        
+        // proprités liées au span d'affiche du prix 
         span {
             position: relative;
             top:40px;
+            font-size: 14px;
+            font-weight: 600;
         }
      
        
-        position: relative;
-        z-index: 2;
+       
         
       
     }
 
+    //-----------------------------------------------PARTIE LIEE A LA BOX AVEC LE SIGNE DE VALIDATION-----------------
     .item-validate-btn{
 
-        transition-duration: 2s;
-        transition-property: transform;
-        transition-timing-function: ease;
 
-        position: absolute;
-        top:-25px;
-        right: -20px;
+        background-color: $tertiary-color;
+        transition-property: display 2s ease;
        
       
-       bottom: 0;
-       z-index: 1;
+
+
+
        
-       background-color: $tertiary-color;
-       padding: 60px 30px;
-       display: flex;
+       // proprités nécessaires à la position du bouton de validation dans la box de validation
+       display: none;
+       width: 20%;
        justify-content: center;
        align-items: center;
+       
+       
+       
+    
+       // propriétés de l'icone  de validation
        i {
             border-radius: 25px;
             color: $tertiary-color;
             background-color: white;
-            position: relative;
+            
             bottom: 8px;
             padding: 3px; 
-            
-            
-            
+                
        }
 
        

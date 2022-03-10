@@ -1,8 +1,14 @@
 .restaurant-picture {
    
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+
     height: 350px;
     overflow: hidden;
-   
+    position: relative;
+    z-index: 0;
+    margin-bottom: 0;
     
     
     img {
@@ -10,4 +16,5 @@
         max-width: 100%;
         
     }
+
 }

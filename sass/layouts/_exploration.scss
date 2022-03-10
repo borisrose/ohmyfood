@@ -31,16 +31,21 @@
         border: none;
        
         background-image: linear-gradient(
-            to top,
-            $primary-color,
-            $secondary-color,
-
+            top,
+            rgba(147, 86, 220, 0.8),
+            rgba(255, 121, 218, 0.8),
+                    
         );
 
         box-shadow: 2px 2px 2px rgb(209, 209, 209);
 
         &:hover {
             box-shadow: 6px 6px 6px rgb(196, 194, 194);
+            background-image: linear-gradient(
+            top,
+            rgba(147, 86, 220, 1),
+            rgba(255, 121, 218, 1),
+            );
         }
     }
 }
