@@ -84,26 +84,54 @@
             
             
             align-self: center;
+            position: relative;
 
 
-            i{
-                transform-origin: bottom;
-                .fa-heart{
-                    background-image: linear-gradient(
-                        top,
-                        $primary-color,
-                        $secondary-color,
-                    );
-                }
+            &:hover{
             
-                &:hover{
-            
-                    animation: animation-progressing-purple-heart 500ms ease forwards;
-                    
-                   
-                   
+                & > .heart-back {
+                    opacity: 1;
                 }
+                & > .heart-border {
+                    opacity: 0;
+                }
+              
             }
+
+            .heart-back {
+                position: absolute;
+                right: 0px;
+                transition: 1s ease-in-out;
+                opacity: 0;
+                background-image: linear-gradient(
+                    to top,
+                    rgba(147,86,220,0.8),
+                    rgba(255, 121, 218, 0.8),
+                );
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            
+            .heart-border {
+                position: absolute;
+                right: 0px;
+                transition: 1s ease-in-out;
+                opacity: 1;
+                background-image: linear-gradient(
+                    to top,
+                    rgba(147,86,220,0.8),
+                    rgba(255, 121, 218, 0.8),
+                );
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        
+                
+             
+            
+        
         }
 
     }
@@ -119,10 +147,7 @@
         .restaurants-box{
             margin: 70px;
             width: 40%;
-            &:hover {
-                transition: transform 500ms ease;
-                transform: scale(1.2);
-            }
+          
             
         }
 

@@ -25,15 +25,6 @@
     }
 }
 
-@keyframes animation-btn {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
 
 @keyframes animation-price-box {
     from {
@@ -41,26 +32,20 @@
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
 
-@keyframes animation-progressing-purple-heart {
-
-    0% {
-        transform: scaleY(0.2);
+@keyframes animation-box-btn {
+    from {
+        opacity: 0;
+        transform: translateX(100%) ;
     }
 
-    30% {
-        transform: scaleY(0.4);
-    }
-
-    60% {
-        transform: scaleY(0.6);
-    }
-
-    100% {
-        transform: scaleY(1);
+    to {
+        opacity: 1;
+        transform: translateX(0) ;
     }
 }
+

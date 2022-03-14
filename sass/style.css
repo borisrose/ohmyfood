@@ -47,36 +47,14 @@
   }
 }
 
-@-webkit-keyframes animation-btn {
-  from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes animation-btn {
-  from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
 @-webkit-keyframes animation-price-box {
   from {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
@@ -86,46 +64,34 @@
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
-@-webkit-keyframes animation-progressing-purple-heart {
-  0% {
-    -webkit-transform: scaleY(0.2);
-            transform: scaleY(0.2);
+@-webkit-keyframes animation-box-btn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
-  30% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
-  }
-  60% {
-    -webkit-transform: scaleY(0.6);
-            transform: scaleY(0.6);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
-@keyframes animation-progressing-purple-heart {
-  0% {
-    -webkit-transform: scaleY(0.2);
-            transform: scaleY(0.2);
+@keyframes animation-box-btn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
-  30% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
-  }
-  60% {
-    -webkit-transform: scaleY(0.6);
-            transform: scaleY(0.6);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -223,21 +189,41 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  position: relative;
 }
 
-.restaurants-box-heart-box i {
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
+.restaurants-box-heart-box:hover > .heart-back {
+  opacity: 1;
 }
 
-.restaurants-box-heart-box i .fa-heart {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background-image: linear-gradient(top, #9356DC, #FF79DA);
+.restaurants-box-heart-box:hover > .heart-border {
+  opacity: 0;
 }
 
-.restaurants-box-heart-box i:hover {
-  -webkit-animation: animation-progressing-purple-heart 500ms ease forwards;
-          animation: animation-progressing-purple-heart 500ms ease forwards;
+.restaurants-box-heart-box .heart-back {
+  position: absolute;
+  right: 0px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  opacity: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.8)), to(rgba(255, 121, 218, 0.8)));
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.restaurants-box-heart-box .heart-border {
+  position: absolute;
+  right: 0px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  opacity: 1;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.8)), to(rgba(255, 121, 218, 0.8)));
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 2082px) and (min-width: 768px) {
@@ -253,14 +239,6 @@
   .restaurants-box-desktop-div .restaurants-box {
     margin: 70px;
     width: 40%;
-  }
-  .restaurants-box-desktop-div .restaurants-box:hover {
-    -webkit-transition: -webkit-transform 500ms ease;
-    transition: -webkit-transform 500ms ease;
-    transition: transform 500ms ease;
-    transition: transform 500ms ease, -webkit-transform 500ms ease;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
   }
 }
 
@@ -561,6 +539,7 @@ footer .link__shirk {
           flex-direction: row;
   opacity: 1;
   overflow: hidden;
+  position: relative;
 }
 
 .restaurant-box-item.rb__delay {
@@ -593,11 +572,8 @@ footer .link__shirk {
 }
 
 .restaurant-box-item:hover > .item-validate-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-animation: animation-btn 500ms ease;
-          animation: animation-btn 500ms ease;
+  -webkit-animation: animation-box-btn 500ms ease forwards;
+          animation: animation-box-btn 500ms ease forwards;
 }
 
 .restaurant-box-item:hover > .item-validate-btn i {
@@ -605,8 +581,16 @@ footer .link__shirk {
           animation: validate-btn 500ms 150ms;
 }
 
-.restaurant-box-item:hover > .item-info p {
+.restaurant-box-item:hover > .item-info p, .restaurant-box-item:hover > .item-info h3 {
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  width: 90%;
+}
+
+.restaurant-box-item:hover > .item-price {
+  -webkit-animation: animation-price-box 500ms forwards;
+          animation: animation-price-box 500ms forwards;
 }
 
 .restaurant-box-item .item-info {
@@ -627,6 +611,8 @@ footer .link__shirk {
       -ms-flex-align: start;
           align-items: flex-start;
   overflow: hidden;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .restaurant-box-item .item-info h3 {
@@ -642,9 +628,6 @@ footer .link__shirk {
 }
 
 .restaurant-box-item .item-info p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-size: 14px;
   margin-top: 10px;
   padding-bottom: 0;
@@ -669,7 +652,9 @@ footer .link__shirk {
   background-color: #99E2D0;
   -webkit-transition-property: display 2s ease;
   transition-property: display 2s ease;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 20%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -677,6 +662,13 @@ footer .link__shirk {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
 }
 
 .restaurant-box-item .item-validate-btn i {

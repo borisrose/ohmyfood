@@ -25,6 +25,9 @@
 
     //propriété nécessaire car la box-info aurait dépassé le cadre de la box actuelle 
     overflow: hidden;
+
+    //nouvelles propriétés 
+    position: relative;
   
     //mécanique d'affiche des différentes options une par une 
     &.rb__delay{
@@ -47,25 +50,34 @@
         
     &:hover {
 
-        // animation css du bouton de validation qui existe mais en none display dans la box 
+        //  
         & > .item-validate-btn {
-            display: flex;
+           
+            animation: animation-box-btn 500ms ease forwards;
             
-            animation: animation-btn 500ms ease;
-
+           
             i{
                 animation: validate-btn 500ms 150ms;
             }
         }
 
     
-       
+        // animation css de la box item-info pour avoir l'effet ellipse 
         & > .item-info {  
-    
-           p{   
+            
+           
+           p, h3{   
+                overflow: hidden;
+                white-space: nowrap;
                 text-overflow: ellipsis;
+             
+                width: 90%;
             }    
 
+        }
+
+        & >.item-price {
+            animation: animation-price-box 500ms forwards;
         }
         
     }
@@ -83,9 +95,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        
-        
         overflow: hidden;
+        flex-wrap: nowrap;
+
+       
+       
         
 
         h3{
@@ -104,9 +118,7 @@
 
         p {
            
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+           
             
         
             font-size: 14px;
@@ -163,11 +175,21 @@
 
        
        // proprités nécessaires à la position du bouton de validation dans la box de validation
-       display: none;
+       display: flex;
        width: 20%;
        justify-content: center;
        align-items: center;
+
+       transform-origin: right;
        
+        //nouvelles propriétés
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+       
+
        
        
     
