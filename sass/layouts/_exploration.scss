@@ -5,21 +5,33 @@
     align-items: center;
     background-color: rgba(245, 245, 245, 0.63);
     padding-bottom: 60px;
-    padding-left: 90px;
-    padding-right: 90px;
-
-
-    h1{
-        padding-top: 30px;
-
-    }
-
-    p{
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    
+    .exploration-text{
+        text-align: center;
         
-        color: rgba(83, 83, 83, 0.63);
-        margin-bottom: 40px;
+
+
+        h1{
+            padding-top: 30px;
+            
+            align-self: center;        
+            
+        }
+    
+        p{
+            
+            color: black;
+            font-weight: 300;
+            margin-bottom: 40px;
+             
+        }
+
+
     }
-   
+
 
     a {
 
@@ -27,25 +39,31 @@
         padding: 18px 18px;
         border-radius: 25px;
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 400;
         border: none;
        
+       
         background-image: linear-gradient(
-            top,
-            rgba(147, 86, 220, 0.8),
-            rgba(255, 121, 218, 0.8),
+            to top,
+            rgba(147, 86, 220, 1),
+            rgba(255, 121, 218, 1)
                     
         );
 
-        box-shadow: 2px 2px 2px rgb(209, 209, 209);
+        box-shadow: 2px 2px 2px rgb(151, 149, 149);
 
         &:hover {
-            box-shadow: 6px 6px 6px rgb(196, 194, 194);
+            
+          
+            box-shadow: 6px 6px 6px rgb(151, 149, 149);
             background-image: linear-gradient(
-            top,
-            rgba(147, 86, 220, 1),
-            rgba(255, 121, 218, 1),
+            to top,
+            lighten(rgba(147, 86, 220, 1),5%),
+            lighten(rgba(255, 121, 218, 1), 5%)
             );
         }
     }
+
+
+   
 }

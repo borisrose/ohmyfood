@@ -23,7 +23,7 @@
 
         &:hover {
             box-shadow: 4px 4px 4px rgb(236, 234, 234);
-            background-color:  rgba(147, 86, 220, 0.2);;
+            background-color:  lighten($primary-color, 35%);
         }
 
         span{
@@ -47,4 +47,68 @@
 
     
 
+}
+
+
+@media screen and (max-width: $max-desktop-width) and (min-width:$min-desktop-width){
+
+    .functioning {
+        
+        ul {
+            padding: 0px;
+            flex-direction: row;
+            justify-content: space-between;
+            display: flex;
+
+            :nth-child(2){
+                margin-left: 10px;
+                margin-right: 10px;
+
+                
+            }
+            
+            
+          
+        }
+
+        li {
+                
+            display: inline-block;
+            text-align: center;
+           
+        }
+    }
+        
+
+}
+
+
+@media screen and (max-width: $max-tablet-width) and (min-width: $min-tablet-width){
+
+    .functioning {
+       
+
+        ul {
+           text-align: center;
+          
+           
+           li {
+            position: relative;
+            display: inline-block;
+            
+           }
+        }
+        span {
+            margin-right: 10px;
+        }
+
+        .span-2 {
+            margin-right: 20px;
+        }
+
+        .span-3 {
+            margin-right: 7px;
+        }
+    }
+    
 }

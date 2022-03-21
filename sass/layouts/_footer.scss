@@ -36,3 +36,56 @@ footer {
       
     }
 }
+
+@media screen and (max-width: $max-desktop-width) and (min-width:$min-desktop-width){
+
+
+    footer {
+
+        .link__shirk {
+            position: relative;
+            top: 15px;
+        }
+
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        a:not(:nth-child(1)){
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        //"proposer un restaurant 
+        a:nth-child(2){
+            i {
+                transition: transform 500ms ease-in-out;
+            }
+            &:hover {
+                i {
+                    transform: rotate(360deg);
+                } 
+            }
+        }
+
+
+        //"devenir partenaire" troisième lien du footer
+        a:nth-child(3){
+            i {
+                transition: transform 300ms ease-in-out;
+                
+            }
+            &:hover {
+                i {
+                    transform: rotate(40deg) ;
+                } 
+            }
+        }
+    }
+
+
+
+    
+}
+

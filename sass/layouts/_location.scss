@@ -3,12 +3,19 @@
     padding-top: 20px;
     background-color: rgba(228, 224, 224, 0.63);;
     padding-bottom: 20px;
-    color: rgba(32, 32, 32, 0.63);
+    
     font-weight: 400;
+    
 
     i{
-        padding-left: 15px;
-        padding-right: 15px;
+       position: relative;
+       margin: auto 2px;
+       left: -20px;
 
+    }
+
+    span {
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: 500;
     }
 }

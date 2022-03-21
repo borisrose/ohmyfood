@@ -49,3 +49,32 @@
     }
 }
 
+@keyframes spin {
+    0% {
+        transform: scale(1);
+        transform: rotate(0deg);
+        opacity: 1;
+        
+    }
+
+    10%,20% {
+        transform: rotate(80deg);
+    }
+
+    30%,40% {
+        transform: rotate(160deg);
+    }
+
+    50%, 60% {
+        transform: rotate(220deg);
+    }
+
+    70%, 80% {
+        transform: rotate(290deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity:1;
+    }
+}
