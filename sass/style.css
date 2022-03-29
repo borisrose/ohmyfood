@@ -367,7 +367,7 @@
 
 .load-spinner-page {
   background-color: #ffffff;
-  position: absolute;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -776,6 +776,9 @@ footer .link__shirk {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .restaurant-menu .desktop-restaurant-page .restaurant-menu-starters, .restaurant-menu .desktop-restaurant-page .restaurant-menu-dishes, .restaurant-menu .desktop-restaurant-page .restaurant-menu-desserts {
+    width: 33%;
   }
 }
 
