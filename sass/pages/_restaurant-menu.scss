@@ -56,7 +56,7 @@
 }
 
 
-@media screen and (max-width: $max-desktop-width) and (min-width:$min-desktop-width){
+@media screen and (min-width:$min-desktop-width){
 
     .restaurant-menu {
         flex-direction: row;

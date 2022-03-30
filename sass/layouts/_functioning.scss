@@ -9,58 +9,70 @@
     h1 {
         margin-bottom: 30px;
     }
-    
-    a {
+    ul {
 
-        
-            
-    
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         li {
     
-            background-color: rgba(245, 244, 244, 63%);
-            box-shadow: 2px 2px 2px rgb(236, 234, 234);
-            border-radius: 15px;
             width: 100%;
+            height: 30%;
             padding : 30px 10px;
             margin-bottom: 20px;
-    
+            border-radius: 15px;
+            background-color: rgba(245, 244, 244, 63%);
+            box-shadow: 2px 2px 2px rgb(236, 234, 234);
             &:hover {
                 box-shadow: 4px 4px 4px rgb(236, 234, 234);
                 background-color:  lighten($primary-color, 35%);
+                cursor: pointer;
             }
     
-            span{
-                position: relative;
-                right: 20px;
-                padding: 5px 10px;
-                background-color: $primary-color;
-                border-radius: 25px;
-                color: white;
-            }
+            a {
     
-            i {
-                font-size: 22px;
-                color: rgb(104, 103, 103);
-                margin-right: 20px;
-            }
+                
+                height: 100%;
+                width: 100%;
+               
     
+               
+                span{
+                    position: relative;
+                    right: 20px;
+                    padding: 5px 10px;
+                    background-color: $primary-color;
+                    border-radius: 25px;
+                    color: white;
+                }
+        
+                i {
+                    font-size: 22px;
+                    color: rgb(104, 103, 103);
+                    margin-right: 20px;
+                }
+        
+    
+    
+    
+            }
+          
+    
+            
         }
-    
-
+     
 
     }
-
    
-    
+
 
     
 
 }
 
 
-@media screen and (max-width: $max-desktop-width) and (min-width:$min-desktop-width){
+@media screen and(min-width:$min-desktop-width){
 
     .functioning {
         

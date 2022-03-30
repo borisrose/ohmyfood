@@ -292,6 +292,10 @@
   position: relative;
 }
 
+.restaurants-box-heart-box:hover {
+  cursor: pointer;
+}
+
 .restaurants-box-heart-box:hover > .heart-back {
   opacity: 1;
 }
@@ -344,7 +348,7 @@
   }
 }
 
-@media screen and (max-width: 2000px) and (min-width: 993px) {
+@media screen and (min-width: 993px) {
   .restaurants-box-desktop-div {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -525,23 +529,43 @@ main {
   margin-bottom: 30px;
 }
 
-.functioning a li {
+.functioning ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.functioning ul li {
+  width: 100%;
+  height: 30%;
+  padding: 30px 10px;
+  margin-bottom: 20px;
+  border-radius: 15px;
   background-color: #f5f4f4;
   -webkit-box-shadow: 2px 2px 2px #eceaea;
           box-shadow: 2px 2px 2px #eceaea;
-  border-radius: 15px;
-  width: 100%;
-  padding: 30px 10px;
-  margin-bottom: 20px;
 }
 
-.functioning a li:hover {
+.functioning ul li:hover {
   -webkit-box-shadow: 4px 4px 4px #eceaea;
           box-shadow: 4px 4px 4px #eceaea;
   background-color: #f2eafb;
+  cursor: pointer;
 }
 
-.functioning a li span {
+.functioning ul li a {
+  height: 100%;
+  width: 100%;
+}
+
+.functioning ul li a span {
   position: relative;
   right: 20px;
   padding: 5px 10px;
@@ -550,13 +574,13 @@ main {
   color: white;
 }
 
-.functioning a li i {
+.functioning ul li a i {
   font-size: 22px;
   color: #686767;
   margin-right: 20px;
 }
 
-@media screen and (max-width: 2000px) and (min-width: 993px) {
+@media screen and (min-width: 993px) {
   .functioning ul {
     padding: 0px;
     -webkit-box-orient: horizontal;
@@ -758,7 +782,7 @@ footer .link__shirk {
   font-size: 30px;
 }
 
-@media screen and (max-width: 2000px) and (min-width: 993px) {
+@media screen and (min-width: 993px) {
   .restaurant-menu {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -812,7 +836,7 @@ footer .link__shirk {
   background-color: #99E2D0;
 }
 
-@media screen and (max-width: 2000px) and (min-width: 993px) {
+@media screen and (min-width: 993px) {
   .restaurant-menu-header h2 {
     font-size: 20px;
   }
@@ -864,6 +888,10 @@ footer .link__shirk {
 .restaurant-box-item.rb__delay--4 {
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms;
+}
+
+.restaurant-box-item:hover {
+  cursor: pointer;
 }
 
 .restaurant-box-item:hover > .item-validate-btn {
@@ -977,7 +1005,7 @@ footer .link__shirk {
   padding: 3px;
 }
 
-@media screen and (max-width: 2000px) and (min-width: 993px) {
+@media screen and (min-width: 993px) {
   .restaurant-box-item {
     height: 90px;
   }
@@ -1020,7 +1048,7 @@ footer .link__shirk {
   background-image: linear-gradient(to bottom, #a16be0, #ff93e1);
 }
 
-@media screen and (max-width: 2000px) and (min-width: 993px) {
+@media screen and (min-width: 993px) {
   .restaurant-order a {
     font-size: 18px;
   }
