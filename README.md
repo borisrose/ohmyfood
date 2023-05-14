@@ -1,1 +1,1 @@
-Debut du Projet 3
+Small Static Project Using SASS (SCSS) Responsive and CSS Animations 
